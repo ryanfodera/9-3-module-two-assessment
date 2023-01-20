@@ -1,0 +1,22 @@
+body{
+    background-color: lavender;
+    font-family: monospace;
+    margin:1%;
+}
+header {
+    background-color: skyblue;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 150px;
+}
+header img {
+    height: 150px;
+}
+header h1{
+    margin: 0%;
+}
+@media (max-width: 500px) {
+    #reviews {
+      display: none; 
+    }
+  }
