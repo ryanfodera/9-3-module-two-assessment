@@ -6,7 +6,7 @@ function run() {
     var selectedFilm = undefined
     var len = undefined
     var filmTitles = document.getElementById("titles")
-    var reviewList = document.getElementById("review-list");
+    var reviewList = document.querySelector("ul");
     var showPeopleBtn = document.getElementById("show-people")
     var submitBtn = document.getElementById("submit-btn")
     var resetBtn = document.getElementById("reset-reviews")
@@ -38,14 +38,14 @@ function run() {
         } else {
             selectedFilm = films.filter((film) => film.id == value)[0]
             document.getElementById("display-info").innerHTML = `<p>${selectedFilm.release_date}</p><p>${selectedFilm.description}</p>`
-            var orderedList = document.getElementById("people-list")
+            var orderedList = document.querySelector("ol")
             orderedList.innerHTML = ""
         }
     });
 
     showPeopleBtn.addEventListener('click', () => {
         if (selectedFilm != undefined) {
-            var orderedList = document.getElementById("people-list")
+            var orderedList = document.querySelector("ol")
             orderedList.innerHTML = ""
             if (selectedFilm.people.length == 1) {
                 selectedFilm.people.forEach((person) => {
