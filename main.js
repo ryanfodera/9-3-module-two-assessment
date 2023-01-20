@@ -48,8 +48,7 @@ function run() {
             var orderedList = document.querySelector("ol")
             orderedList.innerHTML = ""
             if (selectedFilm.people.length == 1) {
-                selectedFilm.people.forEach((person) => {
-                    console.log(person)
+                selectedFilm.people.forEach(async(person) => {
                     fetch(url + person)
                         .then((res) => res.json())
                         .then((personData) => {
@@ -60,7 +59,7 @@ function run() {
                 });
 
             } else {
-                selectedFilm.people.forEach((person) => {
+                selectedFilm.people.forEach(async(person) => {
                     fetch(url + person)
                         .then((res) => res.json())
                         .then((personData) => {
