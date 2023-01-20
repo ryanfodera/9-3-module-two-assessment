@@ -37,7 +37,7 @@ function run() {
             selectedFilm = undefined
         } else {
             selectedFilm = films.filter((film) => film.id == value)[0]
-            document.getElementById("display-info").innerHTML = `<p>${selectedFilm.release_date}</p><p>${selectedFilm.description}</p>`
+            document.getElementById("display-info").innerHTML = `<h3>${selectedFilm.title}</h3><p>${selectedFilm.release_date}</p><p>${selectedFilm.description}</p>`
             var orderedList = document.querySelector("ol")
             orderedList.innerHTML = ""
         }
@@ -74,11 +74,17 @@ function run() {
 
     submitBtn.addEventListener('click', (event) => {
         event.preventDefault()
-        var review = document.getElementById("review").value;
+        if (selectedFilm == "" || selectedFilm == undefined) {
+            alert("Please select a movie first")
+        } else {
+            var review = document.getElementById("review").value;
 
-        localStorage.setItem(selectedFilm.title + "rexiew", review)
+            localStorage.setItem(selectedFilm.title + "rexiew", review)
 
-        reviewList.innerHTML += `<li><strong>${selectedFilm.title}: </strong> ${review}</li>`
+            reviewList.innerHTML += `<li><strong>${selectedFilm.title}: </strong> ${review}</li>`
+
+            document.getElementById("review").value = ""
+        }
     });
 
     resetBtn.addEventListener('click', () => {
