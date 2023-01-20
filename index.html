@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,11 @@
     <link rel="stylesheet" href="style.css">
     <script defer src="main.js"></script>
     <title>Module Two Assessment - Ryan Fodera</title>
-    <link rel="stylesheet" href="./style.css">
-    <script defer src="main.js"></script>
 </head>
+
 <body>
     <header>
-        <img src="./images/ghibli-logo.png" alt="Ghibli logo"/>
+        <img src="./images/ghibli-logo.png" alt="Ghibli logo" />
         <h1>Ghibli Review App</h1>
     </header>
     <main>
@@ -22,29 +22,31 @@
                 <option></option>
             </select>
         </section>
+
+        <section>
+            <h2>Movie details</h2>
+            <div id="display-info">
+            </div>
+        </section>
+        <section>
+            <h2>People</h2>
+            <ol id="people-list"></ol>
+            <button id="show-people">Show People</button>
+        </section>
         <section>
             <h2>Add a review</h2>
             <form>
                 <label for="review">Your review</label>
                 <input type="text" id="review"></input>
-                <input type="submit"></input>
+                <input type="submit" id="submit-btn" value="Submit Review"></input>
             </form>
-        </section>
-        <section>
-            <h2>Movie details</h2>
-            <div id="display-info">
-            </div> 
-        </section>
-        <section>
-            <h2>People</h2>
-            <ol></ol>
-            <button id="show-people">Show People</button>
         </section>
         <section id="reviews">
             <h2>Reviews</h2>
-            <ul></ul>
+            <ul id="review-list"></ul>
             <button id="reset-reviews">Reset Reviews</button>
         </section>
     </main>
 </body>
+
 </html>
